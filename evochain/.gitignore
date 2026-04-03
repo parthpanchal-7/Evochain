@@ -1,3 +1,6 @@
-target
-Cargo.lock
-chain.json
+evochain/target/
+evochain/chain.json
+backend/ai-service/.venv/
+backend/ai-service/__pycache__/
+backend/ai-service/.pytest_cache/
+backend/ai-service/**/*.pyc
