@@ -1,0 +1,15 @@
+evochain/target/
+evochain/chain.json
+backend/ai-service/.venv/
+backend/ai-service/__pycache__/
+backend/ai-service/.pytest_cache/
+backend/ai-service/**/*.pyc
+frontend/dashboard/node_modules/
+frontend/dashboard/dist/
+frontend/dashboard/.vite/
+.runtime/
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.log

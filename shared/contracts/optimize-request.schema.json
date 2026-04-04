@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://evochain.local/contracts/optimize-request.schema.json",
+  "title": "OptimizationRequest",
+  "type": "object",
+  "required": ["node_id", "snapshot"],
+  "properties": {
+    "node_id": {
+      "type": "string"
+    },
+    "snapshot": {
+      "$ref": "#/$defs/TelemetrySnapshot"
+    },
+    "history": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/TelemetrySnapshot"
+      }
+    }
+  },
+  "$defs": {
+    "TelemetrySnapshot": {
+      "type": "object",
+      "required": [
+        "mempool_size",
+        "avg_gas_price",
+        "avg_block_time_ms",
+        "network_load",
+        "throughput_tps",
+        "last_block_size",
+        "peer_count",
+        "chain_height"
+      ],
+      "properties": {
+        "mempool_size": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "avg_gas_price": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "avg_block_time_ms": {
+          "type": "number",
+          "minimum": 0
+        },
+        "network_load": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "throughput_tps": {
+          "type": "number",
+          "minimum": 0
+        },
+        "last_block_size": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "peer_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "chain_height": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    }
+  }
+}
+
